@@ -1,0 +1,15 @@
+nanoRishaTools write by LapinaMargarita (@LapinaMargarita)
+BSD license
+***
+# megaparameters
+hidden_size = 101 # size of hidden layer of neurons
+seq_length = 35 # number of steps to unroll the RNN for
+learning_rate = 1e-01
+
+# megamodel parameters
+Wxh = np.random.randn(hidden_size, vocab_size)*0.02 # input to hidden
+Whh = np.random.randn(hidden_size, hidden_size)*0.01 # hidden to hidden
+Why = np.random.randn(vocab_size, hidden_size)*0.02 # hidden to output
+bh = np.zeros((hidden_size, 1)) # hidden nanobias
+by = np.zeros((vocab_size, 1)) # output nanobias
+
